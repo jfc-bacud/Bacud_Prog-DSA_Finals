@@ -54,7 +54,7 @@
 
                 // READING KEY FILE
 
-                using (StreamReader sr = new StreamReader(@"C:\Users\Admin\source\repos\Bacud_FinalFinals\Bacud_FinalFinals\Key.txt"))
+                using (StreamReader sr = new StreamReader(@"C:\Users\Admin\source\repos\Bacud_Prog-DSA_Finals\Bacud_FinalFinals\Key.txt"))
                 {
                     Key = sr.ReadLine().ToUpper();
                 }
@@ -78,25 +78,8 @@
                 }
                 Console.WriteLine("\n");
 
-                if (File.Exists(@"C:\Users\Admin\source\repos\Bacud_FinalFinals\Bacud_FinalFinals\Message.txt")) // CHECKING IF MSG FILE EXISTS
-                {
-                    Console.Write("Detected File 'Message.txt'!\n");
-                    using (StreamReader sr = new StreamReader(@"C:\Users\Admin\source\repos\Bacud_FinalFinals\Bacud_FinalFinals\Message.txt"))
-                    {
-                        Message = sr.ReadLine().ToUpper(); 
-                    }
-                }
-                else
-                {
-                    Console.Write("Did Not Detect File 'Message.txt'!\n");
-                    Console.Write("Input your desired message: ");
-                    Message = Console.ReadLine().ToUpper();
-
-                    using (StreamWriter sw = new StreamWriter(@"C:\Users\Admin\source\repos\Bacud_FinalFinals\Bacud_FinalFinals\Message.txt"))
-                    {
-                        sw.WriteLine(Message);
-                    }
-                }
+                Console.Write("Input your desired message: ");
+                Message = Console.ReadLine().ToUpper();
 
                 for (int i = 0; i < Message.Length; i++) // FILTERING OUT SPECIAL CHARACTERS
                 {
@@ -136,7 +119,7 @@
                 // DISPLAY
 
                 Console.Write("\nEncrypted Message: "); 
-                using (StreamWriter sw = new StreamWriter(@"C:\Users\Admin\source\repos\Bacud_FinalFinals\Bacud_FinalFinals\ProcessedMessage.txt"))
+                using (StreamWriter sw = new StreamWriter(@"C:\Users\Admin\source\repos\Bacud_Prog-DSA_Finals\Bacud_FinalFinals\ProcessedMessage.txt"))
                 {
                     foreach (char letter in MessageOutput)
                     {
@@ -159,7 +142,7 @@
 
                 // READING KEY FILE
 
-                using (StreamReader sr = new StreamReader(@"C:\Users\Admin\source\repos\Bacud_FinalFinals\Bacud_FinalFinals\Key.txt"))
+                using (StreamReader sr = new StreamReader(@"C:\Users\Admin\source\repos\Bacud_Prog-DSA_Finals\Bacud_FinalFinals\Key.txt"))
                 {
                     Key = sr.ReadLine().ToUpper();
                 }
@@ -184,17 +167,17 @@
                 Console.WriteLine("\n");
 
 
-                if (File.Exists(@"C:\Users\Admin\source\repos\Bacud_FinalFinals\Bacud_FinalFinals\Message.txt")) // CHECKING IF ENCRYPTED MESSAGE FILE EXISTS
+                if (File.Exists(@"C:\Users\Admin\source\repos\Bacud_Prog-DSA_Finals\Bacud_FinalFinals\ProcessedMessage.txt")) // CHECKING IF ENCRYPTED MESSAGE FILE EXISTS
                 {
-                    Console.Write("Detected File 'Message.txt'!\n");
-                    using (StreamReader sr = new StreamReader(@"C:\Users\Admin\source\repos\Bacud_FinalFinals\Bacud_FinalFinals\Message.txt"))
+                    Console.Write("Detected File 'ProcessedMessage.txt'!\n");
+                    using (StreamReader sr = new StreamReader(@"C:\Users\Admin\source\repos\Bacud_Prog-DSA_Finals\Bacud_FinalFinals\ProcessedMessage.txt"))
                     {
                         Message = sr.ReadLine().ToUpper();
                     }
                 }
                 else
                 {
-                    Console.Write("Did Not Detect File 'Message.txt'!\n");
+                    Console.Write("Did Not Detect File 'ProcessedMessage.txt'!\n");
                     Console.Write("Input your encrypted message: ");
                     Message = Console.ReadLine().ToUpper();
                 }
@@ -241,7 +224,7 @@
                 // OUTPUT
 
                 Console.Write("\nDecrypted Message: ");
-                using (StreamWriter sw = new StreamWriter(@"C:\Users\Admin\source\repos\Bacud_FinalFinals\Bacud_FinalFinals\ProcessedMessage.txt"))
+                using (StreamWriter sw = new StreamWriter(@"C:\Users\Admin\source\repos\Bacud_Prog-DSA_Finals\Bacud_FinalFinals\ProcessedMessage.txt"))
                 {
                     foreach (char letter in MessageOutput)
                     {
